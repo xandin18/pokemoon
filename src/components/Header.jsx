@@ -22,6 +22,8 @@ const ContainerHeader = styled.header`
 
     .ContainerOff{
         display: none;
+        animation-duration: 0.5s;
+        animation-name: slidenOff;
     }
 
     .ContainerOn{
@@ -57,7 +59,7 @@ const ContainerHeader = styled.header`
 
         @keyframes sliden{
             from{
-                width: 0px;
+                width: 150px;
                 display: none;
             }
             to{
@@ -67,6 +69,16 @@ const ContainerHeader = styled.header`
         }
 
     }
+        @keyframes slidenOff{
+            from{
+                width: 300px;
+                display: flex;
+            }
+            to{
+                width: 0px;
+                display: none;
+            }
+        }
 
 `
 

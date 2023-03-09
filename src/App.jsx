@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Header from './components/Header';
-import Search from './components/Search';
+import PokeApi from './components/PokeApi';
 
 const ContainerApp = styled.div`
   display: flex;
@@ -13,7 +13,7 @@ function App() {
   return (
     <ContainerApp>
       <Header />
-      <Search />
+      <PokeApi />
       <h1>Hello World!</h1>
     </ContainerApp>
   );
