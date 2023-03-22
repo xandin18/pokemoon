@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Header from './components/Header';
-import PokeApi from './components/PokeApi';
+import { Outlet } from 'react-router-dom';
 
 const ContainerApp = styled.div`
   display: flex;
@@ -13,8 +13,7 @@ function App() {
   return (
     <ContainerApp>
       <Header />
-      <PokeApi />
-      <h1>Hello World!</h1>
+      <Outlet /> 
     </ContainerApp>
   );
 }

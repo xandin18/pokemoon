@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { CloseButton } from "reactstrap";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai"
 import { AiOutlineHome } from "react-icons/ai"
@@ -14,10 +16,22 @@ const ContainerHeader = styled.header`
     width: 100vw;
     align-items: center;
     justify-content: space-around;
-    height: 110px;
+    height: 100px;
+    padding: 30px;
+    z-index: 9999;
 
     h1{
         font-family: 'Pokemon Solid', sans-serif;
+    }
+
+    .HambOff{
+        color: transparent;
+        transition: all 0.2s ease-in-out;
+        cursor: default;
+    }
+
+    .HambOn{
+        transition: all 0.2s ease-in-out;
     }
 
     .ContainerOff{
@@ -51,10 +65,22 @@ const ContainerHeader = styled.header`
             cursor: pointer;
             justify-content: center;
             align-items: center;
+
+            .link{
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                transition: all 0.3s ease-in-out;
+            }
         }
 
         li:hover{
             color: #FF3131;
+            .link{
+                color: #FF3131;
+            }
         }
 
         @keyframes sliden{
@@ -98,17 +124,18 @@ function Header(){
                 size={25}
                 cursor={'pointer'}
                 onClick={handleClick}
-                className="Hamb"
+                className={clickSide === false ? "HambOn" : "HambOff"}
             />
             <ul className={clickSide === true ? "ContainerOn" : "ContainerOff"}>
-                <AiOutlineClose
+                <CloseButton
                     cursor={'pointer'}
                     onClick={handleClick}
                     size={25}
+                    variant="white"
                 />
-                <li> <AiOutlineHome /> Home</li>
-                <li> <BsPerson/> Quem fez?</li>
-                <li> <BiBookAlt/> Pokemons</li>
+                <li> <Link className="link" to="/"><AiOutlineHome /> Home</Link> </li>
+                <li> <Link className="link" to="me"><BsPerson/> Quem fez?</Link> </li>
+                <li> <Link className="link" to="pokemon"><BiBookAlt/> Pokemons</Link> </li>
             </ul>
         </ContainerHeader>
     )

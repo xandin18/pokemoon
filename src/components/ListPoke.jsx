@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { Spinner } from "reactstrap";
 
 const ContainerListPoke = styled.ul`
   display: flex;
@@ -9,8 +10,8 @@ const ContainerListPoke = styled.ul`
     li{
       display: flex;
       flex-direction: column;
-      width: 120px;
-      height: 150px;
+      width: 160px;
+      height: 190px;
       padding: 20px;
       align-items: center;
       text-align: center;
@@ -72,7 +73,7 @@ function Pokemon({ pokemon }) {
           {pokemon.name}
         </>
       ) : (
-        <p>Carregando...</p>
+        <Spinner color='light'/>
       )}
     </>
   );
