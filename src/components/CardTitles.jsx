@@ -39,8 +39,7 @@ function CardTitles(){
                 <CardBody>
                     <CardText style={{color: "black"}}>
                         <i>
-                            Eu Alexandre quem criou este projeto, bom como disse na Home o intuito era treinar mais o ReactRouter,
-                            mas ainda sim eu aproveitei e aprendi um pouco de bootstrap, aah e também consumi uma api para práticar que fazia tempo que não consumia, e gostei bastante do resultado final, é isso obrigado por acompanhar este projeto até aqui espero que tenha gostado.
+                            Eu Alexandre quem criou este projeto, bom como disse na Home o intuito era treinar mais o ReactRouter, mas ainda sim eu aproveitei e aprendi um pouco de bootstrap, aah e também consumi uma api para práticar que fazia tempo que não consumia, e gostei bastante do resultado final, é isso obrigado por acompanhar este projeto até aqui espero que tenha gostado.
                         </i>
                     </CardText>
                     <CardLink>
