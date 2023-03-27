@@ -1,6 +1,6 @@
 # pokemoon
 
-Olá me >Alexandre e fiz um projeto com ReactJS, styled-components, React-Router e um pouco de Bootstrap.
+Olá me Alexandre e fiz um projeto com ReactJS, styled-components, React-Router e um pouco de Bootstrap.
 
 Neste projeto como falei em alugumas partes dele é para treinar e práticar meu react-router, e aproveitei para colocar um pouco em prática outras coisas, como consumir um api e bootstrap.
 
