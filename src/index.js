@@ -8,6 +8,7 @@ import PokeApi from './routes/PokeApi';
 import QuemFez from './routes/quemFez';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import PokeDetails from './routes/PokeDetails';
 
 const Router = createBrowserRouter([
       {
@@ -21,6 +22,10 @@ const Router = createBrowserRouter([
           {
             path:"pokemon",
             element:<PokeApi />
+          },
+          {
+            path:"pokemon/:id",
+            element:<PokeDetails />
           }
         ],
       },

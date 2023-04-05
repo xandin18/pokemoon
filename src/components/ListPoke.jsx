@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Spinner } from "reactstrap";
+import { Link } from "react-router-dom";
 
 const ContainerListPoke = styled.ul`
   display: flex;
   gap: 20px;
   list-style: none;
   flex-wrap: wrap;
-    li{
+    .poke{
       display: flex;
       flex-direction: column;
       width: 160px;
@@ -16,6 +17,8 @@ const ContainerListPoke = styled.ul`
       align-items: center;
       text-align: center;
       border-radius: 10px;
+      text-decoration: none;
+      color: white;
 
       background-color: #111111;
 
@@ -44,9 +47,9 @@ function ListPoke() {
   return (
     <ContainerListPoke>
       {pokemonData.map((pokemon, index) => (
-        <li key={index}>
+        <Link className="poke" to=":id" key={index}>
           <Pokemon pokemon={pokemon} />
-        </li>
+        </Link>
       ))}
     </ContainerListPoke>
   );
